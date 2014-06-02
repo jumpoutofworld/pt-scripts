@@ -1,0 +1,24 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+  <meta http-equiv="content-type" content="text/html;charset=utf-8">	
+  <head>
+    <title>查询页面编码</title>
+    <meta name="author" content="Peng Tao">
+  </head>
+
+  <body>
+    <h1>查询页面编码</h1>
+
+
+	{% if query %}
+	<h1>Hello {{ query }}!</h1>
+	{% else %}
+	<h1>no name， Hello World!</h1>
+	{% endif %}	
+    <hr>
+    <address>
+      <a href="mailto:pengtao@B000000030327N">Peng Tao</a>,
+       2013-06-28 
+    </address>
+  </body>
+</html>
