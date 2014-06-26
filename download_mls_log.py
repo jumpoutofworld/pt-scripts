@@ -14,8 +14,6 @@ import os
 import datetime
 from argparse import ArgumentParser
 
-from ubsutils.pipe.mr import MRConf
-from ubsutils.hadoop.logpath import hadoop_bin, logpath
 
 # overwrite hadoop_bin
 
