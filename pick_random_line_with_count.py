@@ -51,9 +51,12 @@ class CPickRandomLineWithCount:
         for line in open(self.fn):
             fields = line.split(self.sep)
             val, count = map(lambda x: fields[x], self.ft)
-            self.total_count += int(count)
-            self.fields.append(val)
-            self.cumsum_ratio.append(self.total_count)
+            try:
+                self.total_count += int(count)
+                self.fields.append(val)
+                self.cumsum_ratio.append(self.total_count)
+            except ValueError:
+                print >> sys.stderr, "invalid fields and count in %s" % line
 
         total = float(self.total_count)
         self.cumsum_ratio = map(lambda x: x/total, self.cumsum_ratio)
